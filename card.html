@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="/card.js" defer></script>
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+</head>
+<body>
+  <div class="moon_wrap">
+      <img src="./img/e_card.png" class="card"/>
+        <div class="shine_moon" id="shine_moon">
+            <img src="./img/moon4.png" class="card_moon" id="card_moon"/>
+        </div>
+  </div>
+</body>
+<script type="text/javascript">
+    YUI().use('anim', function(Y) {
+        
+        demoA = Y.one('#shine_moon'); // The animated element
+ 
+        var anim = new Y.Anim({
+            node: demoA,
+            duration: 2.5,
+            easing: Y.Easing.easeOut
+        });           
+        
+ 
+        var startAnim = function(e){
+            demoA.setStyles({'left': 450, 'top': 750}); 
+            anim.set('to', {curve: [ [450, 750], [500, 150], [1250, 130] ]});
+            anim.run();
+        };    
+ 
+        Y.one('#card_moon').on('click', startAnim);
+        startAnim();    
+    });
+    
+ 
+    </script>
+</html>

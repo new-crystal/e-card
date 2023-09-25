@@ -1,0 +1,136 @@
+body{
+  width: 1080px;
+  height: 1080px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+  .moon_wrap{
+    width: 100vw;
+    height: 100vh;
+  }
+  .moon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image: url("./img/moon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: growMoon 3s ease-in-out;
+  }
+
+  .moon_2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image: url("./img/moon2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fadeMoon 1s ease-in-out;
+  }
+  
+  .moon_3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image: url("./img/moon3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* animation: fadeMoon 1s ease-in-out; */
+  }
+
+
+  .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1080px;
+  }
+  
+  .card_moon {
+    width: 290px;
+    position: relative;
+    top: -81px;
+    left: -86px;
+    /* animation: xAxis 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);     */
+  }
+
+  .shine_moon{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+  }
+
+  @keyframes moveDiv2 {
+    0% {
+      left: 0;
+      bottom: 50%;
+    }
+    /* 25% {
+      left: 25%;
+      bottom: 60%;
+    }
+    50% {
+      left: 50%;
+      bottom: 70%;
+    }
+    90% {
+      left: 60%;
+      bottom: 75%;
+    } */
+    100% {
+      left: 80%;
+      bottom: 85%;
+    }
+  }
+  
+
+  @keyframes growMoon {
+    0% {
+      transform: translate(-50%, -50%) scale(0.3); /* 초기 위치 및 시작 크기 */
+  }
+  100% {
+      transform: translate(-50%, -50%) scale(1.0); /* 최종 크기 */
+  }
+}
+
+@keyframes fadeMoon {
+  0% {
+      opacity: 0; /* 초기에 투명 */
+  }
+  100% {
+      opacity: 1; /* 불투명으로 변경 */
+  }
+}
+
+@keyframes yAxis {
+  50% {
+      animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+      transform: translateY(-300px);
+  }
+}
+
+@keyframes xAxis {
+  50% {
+      animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+      transform: translateX(300px);
+  }
+}
+
