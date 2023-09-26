@@ -1,20 +1,18 @@
 const moon = document.querySelector(".moon");
-const moon2 = document.querySelector(".moon_2");
-const moon3 = document.querySelector(".moon_3")
+const moon2 = document.querySelector(".text_1");
+const moon3 = document.querySelector(".intoon_logo")
 
 function mentionMoon() {
     setTimeout(() => {
-        moon.style.display = "none";
         moon2.style.display = "";
     }, 3000);
 
     setTimeout(() => {
-        moon2.style.display = "none";
         moon3.style.display = "";
     }, 4500);
 
     setTimeout(()=>{
-        window.location.href = "card.html"
+        window.location.href = "moon.html"
     }, 6000)
 }
 window.onload = () =>{

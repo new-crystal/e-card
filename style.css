@@ -1,6 +1,8 @@
 body{
-  width: 1080px;
-  height: 1080px;
+  /* width: 1080px;
+  height: 1080px; */
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -14,62 +16,55 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
-    height: 500px;
+    width: 1000px;
+    height: 1000px;
     border-radius: 50%;
-    background-image: url("./img/moon.png");
+    background-image: url("./images/moon.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     animation: growMoon 3s ease-in-out;
   }
 
-  .moon_2{
+  .text_1{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
-    height: 500px;
+    width: 1000px;
+    height: 1000px;
     border-radius: 50%;
-    background-image: url("./img/moon2.png");
+    background-image: url("./images/moon_text_1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     animation: fadeMoon 1s ease-in-out;
   }
   
-  .moon_3{
+  .intoon_logo{
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
-    height: 500px;
+    height: 154px;
     border-radius: 50%;
-    background-image: url("./img/moon3.png");
+    background-image: url("./images/moon_text_2.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    /* animation: fadeMoon 1s ease-in-out; */
+    background-size: contain;
+    animation: fadeMoon 1s ease-in-out;
+  }
+  #animation_container{
+    width:1080px; 
+    height:1080px;
   }
 
+  #dom_overlay_container{
+    width:1080px; 
+    height:1080px;
+  }
 
-  .card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1080px;
-  }
-  
-  .card_moon {
-    width: 290px;
-    position: relative;
-    top: -81px;
-    left: -86px;
-    /* animation: xAxis 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);     */
-  }
 
   .shine_moon{
     width: 120px;
@@ -78,29 +73,14 @@ body{
     box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
   }
 
-  @keyframes moveDiv2 {
-    0% {
-      left: 0;
-      bottom: 50%;
-    }
-    /* 25% {
-      left: 25%;
-      bottom: 60%;
-    }
-    50% {
-      left: 50%;
-      bottom: 70%;
-    }
-    90% {
-      left: 60%;
-      bottom: 75%;
-    } */
-    100% {
-      left: 80%;
-      bottom: 85%;
-    }
+  .moon_card_wrap{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
-  
+
+
 
   @keyframes growMoon {
     0% {
@@ -120,17 +100,43 @@ body{
   }
 }
 
-@keyframes yAxis {
-  50% {
-      animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
-      transform: translateY(-300px);
+@media screen and (max-width:600px){
+  #animation_container{
+    width: 300px; 
+    height: 300px;
   }
-}
 
-@keyframes xAxis {
-  50% {
-      animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
-      transform: translateX(300px);
+  #dom_overlay_container{
+    width: 300px; 
+    height: 300px;
   }
-}
 
+  .moon_card_wrap{
+    width: 95vw;
+  }
+  .moon_card_wrap > div{
+    width: 95vw;
+  }
+  #canvas {
+    width: 95vw;
+  }
+  body{
+    overflow: hidden;
+  }
+  .moon{
+    width: 300px;
+    height: 300px;
+  }
+
+  .text_1{
+    width: 300px;
+    height: 300px;
+  }
+
+  .intoon_logo{
+    width: 200px;
+    height: 71px;
+  }
+
+ 
+}
