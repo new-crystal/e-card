@@ -12,6 +12,7 @@ function mentionMoon() {
     }, 4500);
 
     setTimeout(()=>{
+        moon.classList.add("fade-out")
         window.location.href = "moon.html"
     }, 6000)
 }
